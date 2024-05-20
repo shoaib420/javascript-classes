@@ -5,8 +5,8 @@
 
 // == ===
 //  let num1 = 6;
-//  let num2 = 6;
-//  console.log(num1 == num2);
+//  let num2 = '6';
+//  console.log(num1 === num2);
 
 //  let num1 = 6;  //data type Number 
 //  let num2 = '6'; // string
@@ -22,10 +22,11 @@
 // let num2 = 7; // string
 // console.log(num1 != num2);
 
+// console.log(5 !== 6);
 //  console.log("5" !== 5);
 
-// < greater then 
-// > less then 
+// > greater then 
+// < less then 
 //  console.log(5 < 7);
 
 // let num = 55;
@@ -38,9 +39,9 @@
 
 //  <= <==
 
-// let num = 155;
+// let num = 66;
 // let num2 = 66;
-// console.log(num >= num2);
+// console.log(num <= num2);
 
 // let num = 155;
 // let num2 = 9999;
@@ -49,7 +50,11 @@
 
 
 // let age = +prompt("inter your age");
-
+//  if(age >= 18 ){
+//     console.log("you can apply cnic");
+//  }else{
+//     console.log("you are not eligble");
+//  }
 // if( age >= 18  ){
 //  console.log("you can apply cnic");
 // }else{
@@ -57,10 +62,13 @@
 // }
 
 let userNum = +prompt("inter your number");
-let computerNumber = Math.round(Math.random() * 5);
-
+let computerNumber = Math.round(Math.random() * 10);
+// console.log(computerNumber);
 if(userNum === computerNumber){
     console.log(" you win ");
 }else{
-    console.log("you loss ! "  + computerNumber );
+    console.log("you loss ! " + computerNumber );
 }
+
+// let usernumber = +prompt("inter your number");
+// console.log(usernumber + 5);
