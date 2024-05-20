@@ -16,7 +16,7 @@
 // let num2 = 6; // string
 // console.log(num1 === num2);
 
-// != , ==!
+// != , !==
 
 // let num1 = 6;  //data type Number 
 // let num2 = 7; // string
