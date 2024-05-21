@@ -61,14 +61,15 @@
 //     console.log("you are not eligble")
 // }
 
-let userNum = +prompt("inter your number");
-let computerNumber = Math.round(Math.random() * 10);
-// console.log(computerNumber);
-if(userNum === computerNumber){
-    console.log(" you win ");
-}else{
-    console.log("you loss ! " + computerNumber );
-}
+// let userNum = +prompt("inter your number");
+// let computerNumber = Math.round(Math.random() * 10);
+// // console.log(computerNumber);
+// if(userNum === computerNumber){
+//     console.log(" you win ");
+// }else{
+//     console.log("you loss ! " + computerNumber );
+// }
 
 // let usernumber = +prompt("inter your number");
 // console.log(usernumber + 5);
+
