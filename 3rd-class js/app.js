@@ -73,3 +73,16 @@
 // let usernumber = +prompt("inter your number");
 // console.log(usernumber + 5);
 
+
+let num1 = 77;
+num1 = 34;
+console.log(num1) // 34
+let num2 = 87;
+console.log(num2); //87
+let num3 =  76;
+num3 = 99;
+console.log(num3); // 99 
+
+num3 = 123;
+console.log(num3); // 123
+
