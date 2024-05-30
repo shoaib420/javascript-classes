@@ -8,8 +8,9 @@
 // let name = [];
 
 // for(let i = 1; i < 100; i++){
-//     name.push("hello")
+//     name.push("hello");
 // }
+
 // console.log(name);
 
 // let name = ["zaheer", "muhammad-ali ", "wasif", "Ali", "noman"];
@@ -25,7 +26,10 @@
 // }
 
 // let arr = ["zaheer", "muhammad-ali ", "wasif", "Ali", "noman" , "zaheer", "muhammad-ali ", "wasif", "Ali", "noman"];
-
+ 
+// arr.forEach(function(val , ind){
+//     console.log(ind ,val);
+// })
 // arr.forEach(function(val, index ){
 // console.log( val, index);
 // })
@@ -37,7 +41,7 @@
 
 // let arr = filterarr.filter(function(val){
     
-//     if(val% 2 != 0){
+//     if(val% 2 === 0){
 //         return true
 //     }else{
 //         return false
@@ -60,10 +64,18 @@
 
 //  console.log(arrsort);
 
-let arr = [10,9,11, 1, ,5,7,6,3, 0,4,67,8,9,9,0,0,9,8,7,1,1,1,1,233,4,5,6];
+// let arr = [10,9,11, 1, ,5,7,6,3, 0,4,67,8,9,9,0,0,9,8,7,1,1,1,1,233,4,5,6];
 
-let a = arr.reduce(function ( preval , currval){
-    return preval + currval ;
+// let a = arr.reduce(function ( preval , currval){
+//     return preval + currval ;
+// })
+
+// console.log(a);
+
+let added = [ 22, 44, 55, 88,  99]
+
+let b = added.reduce(function(preval, currval){
+    return preval + currval
+
 })
-
-console.log(a);
+console.log(b);
