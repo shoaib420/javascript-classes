@@ -1,6 +1,8 @@
-// let mypara = document.getElementById("para");
-// mypara.innerText = "hello world "
-// console.log(mypara);
+let mypara = document.getElementById("para");
+mypara.innerText = "hello world "
+mypara.style.background = "green",
+mypara.style.color = "pink"
+console.log(mypara);
 
 
 let student1 = []
@@ -21,6 +23,7 @@ function students() {
         console.log(student1);
 }
 
+// localStorage.setItem("name ", "shoaib")
 // let person = {
 //     name : "wasif ", 
 //     fname : "abdullah ",
@@ -42,6 +45,3 @@ function students() {
 // console.log(mypara);
 
 
-let paragraphs = document.querySelectorAll("p");
-
-alert(paragraphs[0].nodeName);
