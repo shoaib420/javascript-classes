@@ -7,9 +7,9 @@
 // console.log("hello world "); 
 
 
-// asynchronous  
- setTimeout(function(){
-      console.log("hello javascript ")
- }, 5000)
+// // asynchronous  
+//  setTimeout(function(){
+//       console.log("hello javascript ")
+//  }, 5000)
 
-  console.log("helolo pakistan ");
+//   console.log("helolo pakistan ");
