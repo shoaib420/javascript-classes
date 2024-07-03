@@ -27,3 +27,8 @@ citytime.innerText = result.location.localtime;
 cityTemp.innerText = result.current.temp_c;
 
 })
+
+fetch("http://api.weatherapi.com/v1/current.json?key=0e80df52a2c04564b6250135242606&q=ryk&aqi=yes")
+  .then((res) => res.json())
+  .then((json) => console.log(json))
+
