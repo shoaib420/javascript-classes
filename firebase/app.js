@@ -13,6 +13,7 @@ const signup = async (e)=>{
     console.log(error);
     alert(error.message)
  }
+email.value = ""
 
 }
 
@@ -30,5 +31,19 @@ try {
    console.log(error);
    alert("plz check your password ")
 }
-
+email.value = ""
 }
+
+const logout =()=>{
+     firebase.auth().signOut()
+     firebase.auth().onAuthStateChanged((user) => {
+   if (user) {
+   console.log(user);
+     // ...
+   } else {
+     console.log(`user successfully signout`);
+     alert(`user successfully signout`)
+   }
+ });
+}
+   
