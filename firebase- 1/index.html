@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+     <h1>
+        signup from 
+     </h1>
+     <form onsubmit="signup(event)">
+        <input type="text" placeholder="enter your email " id="email">
+        <input type="password" name="" id="password">
+        <button type="submit">submit</button>
+        
+     </form>
+    </div>
+
+    <div>
+      <h1>
+         Login  
+      </h1>
+      <form onsubmit="login(event)">
+         <input type="text" placeholder="enter your email " id="login_email">
+         <input type="password" name="" id="login_password">
+         <button type="submit">Login</button>
+         <button onclick="logout()">Logout</button>
+      </form>
+  
+     <div class="center">
+      <h2>your account detail</h2>
+      <div class="userdetails">
+
+      </div>
+
+  </div>
+
+
+    <script src="./app.js"></script>
+    <script src="./script/firestore_db.js"></script>
+  
+    <script src= "https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+    <script src= "https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+    <script src= "https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+
+    <script>
+         const firebaseConfig = {
+    apiKey: "AIzaSyBIHeQ0lGiroeLjOOWeh7ejBLnLN9qaloA",
+    authDomain: "testing-app-bd678.firebaseapp.com",
+    projectId: "testing-app-bd678",
+    storageBucket: "testing-app-bd678.appspot.com",
+    messagingSenderId: "956653546382",
+    appId: "1:956653546382:web:dcec92c9fb76e337f112df",
+    measurementId: "G-BK8JKS7V6G"
+  };
+
+  firebase.initializeApp(firebaseConfig);
+    </script>
+</body>
+</html>

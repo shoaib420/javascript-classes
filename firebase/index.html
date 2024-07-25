@@ -1,54 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
-    <div>
-     <h1>
-        signup from 
-     </h1>
-     <form onsubmit="signup(event)">
-        <input type="text" placeholder="enter your email " id="email">
+
+    <div class="sign-up">
+        <h1>sign-up</h1>
+       <form action="" onsubmit="signup(event)">
+        <input type="text" name="" id="email">
         <input type="password" name="" id="password">
-        <button type="submit">submit</button>
-        
-     </form>
+        <button type="submit">Submit</button>
+        <button onclick="google()"> Login with google </button>
+       </form>
+    </div>
+    <div class="Login">
+        <h1>Login</h1>
+        <form action="" onsubmit="Login(event)">
+         <input type="text" name="" id="Login_email">
+         <input type="password" name="" id="Login_password">
+         <button type="submit">login</button>
+         <button onclick="logout()">LogOut</button>
+        </form>
+     </div>
+    <div class="wellcome-box">
+        <h1>
+            wellcome-box 
+        </h1>
     </div>
 
-    <div>
-      <h1>
-         Login  
-      </h1>
-      <form onsubmit="login(event)">
-         <input type="text" placeholder="enter your email " id="login_email">
-         <input type="password" name="" id="login_password">
-         <button type="submit">Login</button>
-         <button onclick="logout()">Logout</button>
-      </form>
-     </div>
+    <div class="center">
+        <h2>your account detail</h2>
+        <div class="userdetails">
 
-    <script src="./app.js"></script>
+        </div>
+
+    </div>
   
-    <script src= "https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
-    <script src= "https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
-    <script src= "https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
 
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
     <script>
-         const firebaseConfig = {
-    apiKey: "AIzaSyBIHeQ0lGiroeLjOOWeh7ejBLnLN9qaloA",
-    authDomain: "testing-app-bd678.firebaseapp.com",
-    projectId: "testing-app-bd678",
-    storageBucket: "testing-app-bd678.appspot.com",
-    messagingSenderId: "956653546382",
-    appId: "1:956653546382:web:dcec92c9fb76e337f112df",
-    measurementId: "G-BK8JKS7V6G"
+  const firebaseConfig = {
+    apiKey: "AIzaSyB-fRsNlES_nXiOSvIvKtWCaslGJdvxefg",
+    authDomain: "login-testing-4672d.firebaseapp.com",
+    projectId: "login-testing-4672d",
+    storageBucket: "login-testing-4672d.appspot.com",
+    messagingSenderId: "376185121102",
+    appId: "1:376185121102:web:d1a5f76fe1525884a3561f",
+    measurementId: "G-DLY47JF2BK" 
   };
 
-  firebase.initializeApp(firebaseConfig);
+  // Initialize Firebase
+   firebase.initializeApp(firebaseConfig);
+  
     </script>
+     <script src="./app.js"></script>
+     <script src="./script/fitrstore-db.js"></script>
 </body>
+
 </html>
