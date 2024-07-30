@@ -1,0 +1,9 @@
+body{
+    background-color: beige;
+}
+
+.hello{
+    text-align: right;
+    color: yellow;
+    border: 1px solid green;
+}
