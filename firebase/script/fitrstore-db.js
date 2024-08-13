@@ -3,7 +3,7 @@
 
 
 const userDetial = document.querySelector(".userdetails")
-const   = document.getElementById("editsprofile")
+const editsprofile  = document.getElementById("editsprofile")
 function createusercollection(user){
  
     firebase.firestore().collection("users")
