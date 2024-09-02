@@ -22,7 +22,8 @@ console.log(error);
   
   return (
     <div>
-<input type='text'  ref={Inp_Ref} onChange={()=> console.log(Inp_Ref.current.value)} />
+<input type='text'  ref={Inp_Ref
+} onChange={()=> console.log(Inp_Ref.current.value)} />
     </div>
   )
 }
