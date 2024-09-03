@@ -1,20 +1,13 @@
 import React from 'react'
-import "./index.css"
+import { NavLink } from 'react-router-dom'
 
-const Navber = (props) => {
-    console.log("nav comp ", props);
+const Navber = () => {
   return (
-    <React.Fragment>
-        <h1 style={{backgroundColor:'blue', color: "white"}}>
-            hello world 
-        </h1>
-        <p className='city'>
-       {props.name} city {props.city}
-        </p> 
-        <p>
-            {/* {props.location}  */}
-        </p>
-    </React.Fragment>
+    <div>
+      <NavLink to="/">Home</NavLink> <br /> 
+      <NavLink to="/contact">contact</NavLink> <br /> 
+      <NavLink to="/about">About</NavLink> <br />
+    </div>
   )
 }
 

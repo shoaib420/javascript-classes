@@ -8,23 +8,24 @@ import React, { useState, useCallback } from "react"
 import DisplayComp from "./call-back/DisplayComp"
 import TogglerComp from "./call-back/TogglerComp"
 import ButtonComp from "./call-back/ButtonComp"
+import {Routes, Route} from 'react-router-dom'
+import Home from "./comp/Home"
+import Contact from "./comp/Contact"
+import About from "./comp/About"
+import Navber from "./component/Navber"
 
- export default function App() {
+  function App() {
   // const [num, setNum] = useState(0);
-  const [counter, setCounter] = useState(0)
-  const [toggler, setToggler] = useState(false);
+  // const [counter, setCounter] = useState(0)
+  // const [toggler, setToggler] = useState(false);
 
-  const HandleCounterChange = ()=>{
-    setCounter(counter + 1 )
-   }
+  
   //  const HandleCounterChange = useCallback(()=>{
   //   setCounter(counter + 1 )
   //  },[counter])
   
   
-   const HandleTogglerChange = ()=>{
-    setToggler(!toggler)
-   }
+  
   //  const HandleTogglerChange = useCallback(()=>{
   //   setToggler(!toggler)
   //  },[toggler])
@@ -37,17 +38,25 @@ import ButtonComp from "./call-back/ButtonComp"
   {/* <Number />
   <Form />
   <Server /> */}
-  <DisplayComp counter={counter} />
+  {/* <DisplayComp counter={counter} />
    <br />
    <TogglerComp toggler={toggler} />
    <br />
    <ButtonComp title="increment" click={HandleCounterChange} />
    <br></br>
 
-<ButtonComp title="Change Toggler" click={HandleTogglerChange}  />
+<ButtonComp title="Change Toggler" click={HandleTogglerChange}  /> 
+*/}
+<Navber />
+<Routes>
+<Route path="/" element={<Home />}  />
+<Route path="/Contact" element={<Contact />} />
+<Route path="/About" element={<About />} />
+</Routes>
     </React.Fragment>
   )
 
 }
 
 
+export default React.memo(App)

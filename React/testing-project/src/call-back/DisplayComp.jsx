@@ -11,5 +11,5 @@ const DisplayComp = ({counter}) => {
   )
 }
 
-export default  DisplayComp
-// export default React.memo(DisplayComp) 
+// export default  DisplayComp
+ export default React.memo(DisplayComp) 

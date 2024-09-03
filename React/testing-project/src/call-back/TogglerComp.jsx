@@ -9,5 +9,5 @@ const TogglerComp = ({toggler}) => {
   )
 }
 
-export default TogglerComp
-// export default React.memo(TogglerComp)
+//export default TogglerComp
+ export default React.memo(TogglerComp)
