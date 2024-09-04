@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from "react"
+import React, { useState, useCallback, createContext } from "react"
 // import Counter from './class-comp/counter'
 // import Count from './class-comp/count'
 // import Number from './component/Conts';
@@ -13,7 +13,7 @@ import Home from "./comp/Home"
 import Contact from "./comp/Contact"
 import About from "./comp/About"
 import Navber from "./component/Navber"
-
+const data = createContext()
   function App() {
   // const [num, setNum] = useState(0);
   // const [counter, setCounter] = useState(0)
@@ -60,3 +60,6 @@ import Navber from "./component/Navber"
 
 
 export default React.memo(App)
+
+
+//context api three part create , provider consumer 
