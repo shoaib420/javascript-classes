@@ -1,5 +1,6 @@
 import React from 'react'
 import Layout from '../../Component/Layout/Layout'
+import ProductCard from '../../Component/ProductCard/ProductCard'
 
 
 const Home = () => {
@@ -10,6 +11,7 @@ const Home = () => {
     hello 
  </h1>
     </Layout>
+    <ProductCard />
  
     </div>
   )

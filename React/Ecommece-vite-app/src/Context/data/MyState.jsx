@@ -7,7 +7,7 @@ const MyState = (props) => {
     const toggleMode =()=>{
         if(mode === "light"){
             setMode("dark")
-            document.body.style.background = "rgb(17, 24, 39)"
+            document.body.style.backgroundColor = "rgb(17, 24, 39)"
         }else{
             setMode("light");
             document.body.style.backgroundColor = "white"
