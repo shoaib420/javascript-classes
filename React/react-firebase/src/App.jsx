@@ -5,6 +5,7 @@ import Home from './component/Home'
 // import Login from './component/Login'
 import Signup from './component/Register/Signup'
 import Login from './component/Register/Login'
+import ProtecteRoute from './protecteRoute/ProtecteRoute'
 
 
  const App = () => {
@@ -12,7 +13,11 @@ import Login from './component/Register/Login'
     <div>
   {/* <Navbar /> */}
   <Routes>
-    <Route path="/"  element={<Home />} />
+    <Route path="/"  element={ 
+      <ProtecteRoute>
+        <Home />
+      </ProtecteRoute>
+      } />
     <Route path="/login"  element={<Login />} />
     <Route path="/signup"  element={<Signup />} />
   </Routes>
