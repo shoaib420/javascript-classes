@@ -5,8 +5,12 @@ import {createUserWithEmailAndPassword  } from "firebase/auth"
 const Signup = () => {
      const [email, setEmail] = useState("")
      const [password, setPassword ] = useState("")
+    
  
       const signup = async()=>{
+        if(email === "" || password === ""){
+          return alert("please fill the all fields")
+        }
        try {
         const user = await createUserWithEmailAndPassword(auth, email, password)
         alert("signup successfull")

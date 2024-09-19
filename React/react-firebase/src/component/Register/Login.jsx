@@ -2,15 +2,24 @@ import './Login.css';
 import React, { useState } from 'react'
 import {auth} from '../../firebase/FirebaseConfig'
 import { signInWithEmailAndPassword  } from "firebase/auth"
+import { useNavigate } from 'react-router-dom';
 
 function Login() {
   const [email, setEmail] = useState("")
   const [password, setPassword ] = useState("")
+  const navigate = useNavigate()
 
    const Login = async()=>{
+    if(email === "" || password === ""){
+      return alert("please fill the all fields")
+    }
     try {
      const user = await signInWithEmailAndPassword(auth, email, password)
+     const users = localStorage.setItem("user", JSON.stringify(user))
      alert("Login successfull")
+     navigate("/")
+     setEmail("");
+     setPassword("")
     } catch (error) {
      console.log(error);
     }
