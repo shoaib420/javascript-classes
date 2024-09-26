@@ -32,11 +32,12 @@ const Cart = () => {
   return (
       <div>
           <div>
-              <div>
+              <div style={{display:"flex", flexWrap:"wrap", justifyContent:"space-around"}}>
               {product.map((item, index)=>{
                     const {title , image, category, price , rating  } =  item;
                 return(
-                    <Card style={{ width: '20rem' }}>
+                   <div >
+                   <Card key={index} style={{ width: '20rem' }}>
                       <Card.Img variant="top" src={image} />
                       <Card.Body>
                           <Card.Title>{title}</Card.Title>
@@ -45,9 +46,10 @@ const Cart = () => {
                           </Card.Text>
                           <Card.Title>{price}</Card.Title>
                           <Card.Title>{rating.rate}</Card.Title>
-                          <Button variant="primary">Go somewhere</Button>
+                          <Button variant="primary" style={{width:"100%"}}>Go somewhere</Button>
                       </Card.Body>
                   </Card>
+                   </div>
                 )
 
                 })

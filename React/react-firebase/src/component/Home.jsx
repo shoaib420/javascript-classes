@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from './Navbar/Navbar'
-import Cart from './cart/Cart'
+import ProductTable from './product_table/ProductTable'
+
 
 const Home = () => {
   return (
@@ -9,7 +10,8 @@ const Home = () => {
         <h1>
             Home 123
         </h1>
-        <Cart />
+        <ProductTable />
+ 
     </div>
   )
 }

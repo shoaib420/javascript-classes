@@ -1,7 +1,12 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import { useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
+import InputGroup from 'react-bootstrap/InputGroup';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 function ColorSchemesExample() {
 const user = JSON.parse(localStorage.getItem("user"))
@@ -27,6 +32,14 @@ const navigate = useNavigate()
             
             
           </Nav>
+          <Row>
+         
+          <Col xs="auto">
+          <NavLink to={"/addproduct"}>
+            <Button type="submit">Add Product</Button>
+            </NavLink>
+          </Col>
+        </Row>
         </Container>
       </Navbar>
     

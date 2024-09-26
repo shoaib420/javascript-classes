@@ -6,12 +6,16 @@ import Home from './component/Home'
 import Signup from './component/Register/Signup'
 import Login from './component/Register/Login'
 import ProtecteRoute from './protecteRoute/ProtecteRoute'
+import Addproduct from './component/Addproduct/Addproduct'
+import Updateproduct from './component/updateProduct/updateproduct'
+import Mystate from './context/data/Mystate'
 
 
  const App = () => {
   return (
     <div>
   {/* <Navbar /> */}
+  <Mystate>
   <Routes>
     <Route path="/"  element={ 
       <ProtecteRoute>
@@ -20,7 +24,10 @@ import ProtecteRoute from './protecteRoute/ProtecteRoute'
       } />
     <Route path="/login"  element={<Login />} />
     <Route path="/signup"  element={<Signup />} />
+    <Route path="/addproduct"  element={<Addproduct />} />
+    <Route path="/updateproduct"  element={<Updateproduct />} />
   </Routes>
+  </Mystate>
     </div>
   )
 }
