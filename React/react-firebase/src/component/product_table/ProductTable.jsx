@@ -5,8 +5,8 @@ import { NavLink } from 'react-router-dom';
 import myContext from '../../context/data/myContext';
 const ProductTable = () => {
   const context = useContext(myContext)
-  const {allProducts} = context;
-  console.log(allProducts);
+  const {allProducts, deleteProduct, editProductHandle, } = context;
+  // console.log(allProducts);
   return (
     <div style={{width:"80%", margin:'10%', textAlign:'center', alignContent:"center"}}>
          <Table striped bordered hover>
@@ -26,15 +26,19 @@ const ProductTable = () => {
         {/* console.log(item) */}
         const {title, price , category , imageUrl} = item;
         return(
-          <tr>
-          <td>1</td>
+          <tr key={index}>
+          <td>{index + 1}</td>
           <td><img width={70} src={imageUrl} /> </td>
           <td>{title}</td>
           <td>{price}</td>
           <td>{category}</td>
-          <td> <Button style={{width:'80px'}} variant="danger">Delete</Button></td>
+          <td> <Button 
+          onClick={()=> deleteProduct(item)}
+           style={{width:'80px'}} variant="danger">Delete</Button></td>
           <td> <NavLink to={"/updateproduct"}>
-          <Button style={{width:'80px'}} variant="success">Edit</Button>{' '}
+          <Button 
+          onClick={()=> editProductHandle(item)}
+           style={{width:'80px'}} variant="success">Edit</Button>
           </NavLink>
           </td> 
          

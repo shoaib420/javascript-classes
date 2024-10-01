@@ -1,7 +1,7 @@
 import React, { useState , useEffect} from 'react'
 import myContext from './myContext'
 
-import { addDoc, collection, doc, onSnapshot, orderBy, query, QuerySnapshot, Timestamp } from 'firebase/firestore'
+import { addDoc, collection, deleteDoc, doc, onSnapshot, orderBy, query, QuerySnapshot, setDoc, Timestamp } from 'firebase/firestore'
 import { fireDB } from '../../firebase/FirebaseConfig'
 
 const Mystate = (props) => {
@@ -61,6 +61,35 @@ const AddProduct = async()=>{
     }
 
  }
+//  Edits product  function
+const editProductHandle = (item)=>{
+    setProduct(item)
+}
+// edits handle fuction 
+
+const editproduct = async()=>{
+    try {
+        await setDoc(doc(fireDB, "products", products.id), products);
+        getProduct()
+        alert("product  updated successfully "  );
+        setTimeout(()=>{
+              window.location.href = "/"
+        },800)
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+/// delete function handle 
+const deleteProduct = async(item)=>{
+    try {
+        await deleteDoc(doc(fireDB, "products" , item.id))
+        getProduct();
+        alert("product is deleted")
+    } catch (error) {
+        console.log(error);
+    }
+}
 
  useEffect(() => {
 getProduct()
@@ -71,7 +100,8 @@ getProduct()
 
   return (
     <div>
-        <myContext.Provider value={{products, setProduct, AddProduct, allProducts, }} >
+        <myContext.Provider value={{products, setProduct, AddProduct, 
+        allProducts, editProductHandle, editproduct, deleteProduct }} >
    {props.children}
         </myContext.Provider>
     </div>
