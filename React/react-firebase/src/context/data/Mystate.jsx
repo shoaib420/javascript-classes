@@ -97,11 +97,12 @@ getProduct()
   
  }, [])
  
+ const [search, setSearch] = useState("")
 
   return (
     <div>
         <myContext.Provider value={{products, setProduct, AddProduct, 
-        allProducts, editProductHandle, editproduct, deleteProduct }} >
+        allProducts, editProductHandle, editproduct, deleteProduct , search, setSearch}} >
    {props.children}
         </myContext.Provider>
     </div>
